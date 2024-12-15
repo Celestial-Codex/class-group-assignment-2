@@ -13,42 +13,36 @@
 #include <stdlib.h>
 #include <time.h>
 int main() {
+  char playerChoice;
+  char computerChoice;
+
+  // randomly compute computer's choice
   srand(time(NULL));
-  int choice = rand() % 10;
-  char p1;
-  char p2;
-  switch (choice) {
-  case 0:
-    p2 = 'S';
-    break;
-  case 1:
-    p2 = 'K';
-    break;
-  default:
-    p2 = 'P';
-    break;
+  int randomChoice = rand() % 3;
+
+  if (randomChoice == 0) {
+    computerChoice = 'S';
+  } else if (randomChoice == 1) {
+    computerChoice = 'K';
+  } else {
+    computerChoice = 'P';
   }
+
   printf("Welcome to Stone Knife Paper.\nEnter S for Stone, K for Knife, or P "
          "for Paper (Ensure Caps Lock is on).\n");
   printf(">>> ");
-  scanf("%c", &p1);
-  if (p1 == 'S') {
-    if (p2 == 'K')
-      printf("You win!");
-    else
-      printf("You lose :(");
-  } else if (p1 == 'K') {
-    if (p2 == 'P')
-      printf("You win!");
-    else
-      printf("You lose :(");
-  } else if (p1 == 'P') {
-    if (p2 == 'S')
-      printf("You win!");
-    else
-      printf("You lose :(");
+
+  scanf("%c", &playerChoice);
+
+  if (playerChoice == computerChoice) {
+    printf("Its a tie\n");
+  } else if ((playerChoice == 'S' && computerChoice == 'K') ||
+             (playerChoice == 'K' && computerChoice == 'P') ||
+             (playerChoice == 'P' && computerChoice == 'S')) {
+    printf("You win 🥳");
+  } else {
+    printf("You loose 😥");
   }
-  printf("\n");
-  printf("Computer's choice was %c.\n", p2);
+  printf("Computer's choice was %c.\n", computerChoice);
   return 0;
 }
