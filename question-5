@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 #define SALESMEN 10
 #define ITEMS 5     
 
@@ -28,16 +27,14 @@ int main() {
            "Name", "Item1", "Item2", "Item3", "Item4", "Item5", "TotalSales");
     printf("---------------------------------------------------------------------------------\n");
 
-    for (i = 0; i < SALESMEN; i++) {
+  for (i = 0; i < SALESMEN; i++) {
         printf("%-15s", names[i]);
         for (j = 0; j < ITEMS; j++) {
-            printf("%-10d", sales[i][j]);  
-
-        }
+            printf("%-10d", sales[i][j]); 
+}
         printf("%-15d\n", totalSales[i]);
     }
-
-    printf("\nGrand Total: %d\n", grandTotal);
+       printf("\nGrand Total: %d\n", grandTotal);
 
     return 0;
 
