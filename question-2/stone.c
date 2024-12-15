@@ -1,3 +1,10 @@
+/*Write a C program that plays "Stone Knife Paper" game, where Stone blunts Knife, Knife cuts Paper,
+and Paper wraps Stone. You play against the computer. The program inputs the computer choice
+(randomly generated. 0 for S (Stone), 1 for K (Knife) otherwise P (Paper)) and your choice, which is
+S, K or P. You win if either your input Stone blunts computers’ input Knife or your input Knife cuts
+computers’ input Paper or your input Paper wraps computers’ input Stone otherwise the computer
+wins. If your input equals computer, no one wins. Your program displays an appropriate message.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
