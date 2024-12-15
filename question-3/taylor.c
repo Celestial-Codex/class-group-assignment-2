@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-#define POWER 15
-int factorial(int n);
 
-int main(int argc, char const *argv[])
+int factorial(int n);
+int pwr(int base, int exponent);
+int main()
 {
     int x;
-    for (int i = 0; i < POWER; i++)
+    printf("Enter value of x for e^x: ");
+    scanf("%d", &x);
+    double ans = 0;
+    for (int i = 0; i < x; i++)
     {
-        x += pow(POWER, i) / factorial(i);
+        ans += pwr(x, i) / factorial(i);
     }
-    printf("%d\n", x);
+    printf("%.4f\n", ans);
     return 0;
 }
 
@@ -21,4 +23,17 @@ int factorial(int n)
         return 1;
     else
         return n * factorial(n - 1);
+}
+int pwr(int base, int exponent)
+{
+    if (exponent == 0)
+        return 1;
+    else
+    {
+        for (int i = 0; i < exponent; i++)
+        {
+            base *= base;
+            return base;
+        }
+    }
 }
