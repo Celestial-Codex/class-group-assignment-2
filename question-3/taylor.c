@@ -3,6 +3,8 @@
 
 int factorial(int n);
 int pwr(int base, int exponent);
+const float euler = 2.718281828;
+
 int main()
 {
     int x;
