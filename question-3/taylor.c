@@ -2,12 +2,15 @@
 #include <stdlib.h>
 
 int factorial(int n);
-int pwr(int base, int exponent);
+double pwr(int base, int exponent);
 
 int main()
 {
     int x;
     int terms;
+    double test = pwr(2, 3);
+    printf("%f\n", test);
+    printf("\n====================================================================\n");
     printf("Enter value of x for e^x: ");
     scanf("%d", &x);
     printf("For how many terms?\n");
@@ -15,7 +18,7 @@ int main()
     double ans = 0;
     for (int i = 0; i < terms; i++)
     {
-        ans += (float) pwr(x, i) / factorial(i);
+        ans += pwr(x, i) / factorial(i);
     }
     printf("%f\n", ans);
     return 0;
@@ -26,27 +29,28 @@ int factorial(int n)
     if (n == 0 || n == 1)
         return 1;
     else
-        return n * factorial(n - 1);
+        return (n * factorial(n - 1));
 }
-int pwr(int base, int exponent)
+double pwr(int base, int exponent)
 {
+    double result = base;
     if (exponent == 0)
         return 1;
     else if (exponent < 0)
     {
         exponent *= -1;
-        for (int i = 0; i < exponent; i++)
+        for (int i = 1; i < exponent; i++)
         {
-            base *= base;
+            result *= base;
         }
-        return 1 / base;
+        return 1 / result;
     }
     else
     {
-        for (int i = 0; i < exponent; i++)
+        for (int i = 1; i < exponent; i++)
         {
-            base *= base;
-            return base;
+            result *= base;
         }
+        return result;
     }
 }
