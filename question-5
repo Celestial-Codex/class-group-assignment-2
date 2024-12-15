@@ -10,5 +10,5 @@ int totalSales[SALESMEN]={0};
 int grandTotal=0;
 int i,j;
 
-
-
+printf("Welcome to the Sales Tracker Program!\n");
+printf("You will enter 
