@@ -8,9 +8,6 @@ int main()
 {
     int x;
     int terms;
-    double test = pwr(2, 3);
-    printf("%f\n", test);
-    printf("\n====================================================================\n");
     printf("Enter value of x for e^x: ");
     scanf("%d", &x);
     printf("For how many terms?\n");
