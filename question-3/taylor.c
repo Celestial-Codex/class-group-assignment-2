@@ -1,3 +1,5 @@
+//Write a program that computes the value of ex by using the formula ex=1+x/1! +x2/2! +x3/3! +--------
+
 #include <stdio.h>
 #include <stdlib.h>
 
