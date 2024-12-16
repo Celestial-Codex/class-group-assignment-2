@@ -44,12 +44,12 @@ int main() {
     }
 
     // Display the sales table
-printf("\nName\t\tItem1\tItem2\tItem3\tItem4\tItem5\tTotalSales\n");
+printf("\nName\t\t\tItem1\tItem2\tItem3\tItem4\tItem5\tTotalSales\n");
 printf("-------------------------------------------------------------\n");
 
 // Loop through each salesman to display their sales
 for (i = 0; i < SALESMEN; i++) {
-    printf("%s\t\t", names[i]); // Print the name
+    printf("%s\t\t\t", names[i]); // Print the name
     for (j = 0; j < ITEMS; j++) {
         printf("%d\t", sales[i][j]); // Print sales for each item
     }
