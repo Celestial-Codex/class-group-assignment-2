@@ -4,7 +4,7 @@ void add(int a, int b);
 void subtract(int a, int b);
 void multiply(int a, int b);
 void divide(int a, int b);
-void printf_result(int a, int b, char *operation, int result);
+void printf_result(int a, int b, char *operation, float result);
 
 int main() {
   int num1, num2;
@@ -56,13 +56,13 @@ void multiply(int a, int b) {
 
 void divide(int a, int b) {
   if (b != 0) {
-    int result = a / b;
+    float result = (float) a / b;
     printf_result(a, b, "/", result);
   } else {
     printf("Error: Division by zero is not allowed.\n");
   }
 }
 
-void printf_result(int a, int b, char *operation, int result) {
-  printf("%d %s %d = %d\n", a, operation, b, result);
+void printf_result(int a, int b, char *operation, float result) {
+  printf("%d %s %d = %f\n", a, operation, b, result);
 }
