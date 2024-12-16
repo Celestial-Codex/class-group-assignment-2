@@ -44,18 +44,17 @@ int main() {
     }
 
     // Display the sales table
-    printf("\n%-15s%-10s%-10s%-10s%-10s%-10s%-15s\n", 
-           "Name", "Item1", "Item2", "Item3", "Item4", "Item5", "TotalSales");
-    printf("---------------------------------------------------------------------------------\n");
+printf("\nName\t\tItem1\tItem2\tItem3\tItem4\tItem5\tTotalSales\n");
+printf("-------------------------------------------------------------\n");
 
-    // Loop through each salesman to display their sales
-    for (i = 0; i < SALESMEN; i++) {
-        printf("%-15s", names[i]); // Print the name
-        for (j = 0; j < ITEMS; j++) {
-            printf("%-10d", sales[i][j]); // Print sales for each item
-        }
-        printf("%-15d\n", totalSales[i]); // Print the total sales
+// Loop through each salesman to display their sales
+for (i = 0; i < SALESMEN; i++) {
+    printf("%s\t\t", names[i]); // Print the name
+    for (j = 0; j < ITEMS; j++) {
+        printf("%d\t", sales[i][j]); // Print sales for each item
     }
+    printf("%d\n", totalSales[i]); // Print the total sales
+}
 
     // Display the grand total
     printf("\nGrand Total: %d\n", grandTotal);
