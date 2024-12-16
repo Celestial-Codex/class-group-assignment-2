@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-// Constants for the number of salesmen and items
 #define SALESMEN 10
 #define ITEMS 5
 
