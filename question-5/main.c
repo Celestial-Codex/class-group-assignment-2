@@ -21,9 +21,9 @@ int main() {
     for (i = 0; i < SALESMEN; i++) {
         // Ask for the salesman's name
         printf("Enter the name of salesman %d: ", i + 1);
-        // Use fgets to allow spaces in the name
-        fgets(names[i], 50, stdin);
-        // Remove the newline character added by fgets
+       
+        scanf("%49s",names[i]);
+        // Reads a single word(up to 49 characters)
         names[i][strcspn(names[i], "\n")] = '\0';
 
         // Ask for sales for each item
