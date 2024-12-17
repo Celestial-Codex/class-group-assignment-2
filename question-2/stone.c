@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctype.h>
 int main() {
   char playerChoice;
   char computerChoice;
@@ -33,6 +34,7 @@ int main() {
   printf(">>> ");
 
   scanf("%c", &playerChoice);
+  playerChoice = toupper(playerChoice);
 
   if (playerChoice == computerChoice) {
     printf("Its a tie\n");
